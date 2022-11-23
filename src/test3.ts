@@ -1,16 +1,25 @@
+/*
+? number 타입의 경우 hex, binary, octal 모두 가능
+? string 타입의 경우 큰 따옴표"", 작은 따옴표'', backtick``으로도 가능
+? Array 타입도 가능하며, 방법은 두가지
+*/
 const listA: number[]=[1,2,3]
 const listB: Array<number> = [1, 2, 3]
+/*
+? null, undefined타입의 경우도 가능 대부분 다른 유형의 하위 유형으로 사용
+let num: number | undefined = undefined
+num = 123
+*/
 
-// let num: number | undefined = undefined
-// num = 123
-
+// ? 문 리터럴 타입과 숫자 리터럴 타입 모두 가능
 let num: 1|2|3;
 num = 1;
 // num = 4 //Error
-
 let str: '여보세요' | '나야'
 // str = '잘 지내니'//Error
 
+// ? any 타입은 숫자, 문자, 함수도 가능하지만, 많이 쓰면 무의미, 타입이 지정되지 않거나
+// ? 임시로 타입을 유지 할 경우에 사용하는 것이 좋다
 let result: any
 result = 123
 result = ()=>{}

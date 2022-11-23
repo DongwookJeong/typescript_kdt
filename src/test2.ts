@@ -6,6 +6,11 @@ import { isConstructorDeclaration } from "typescript";
 //   lang: string;
 // }
 
+// ? TS 문법5 - class
+// ? public은 프로그램 전체에서 자유롭게 접근 가능
+// ? private은 private을 선언한 클래스 외에서는 접근할 수 없는 멤버변수
+// ? TS 문법5 - getter, setter
+// ? setter의 경우 멤버 변수를 숨기고, 값 할당시에 제약 조건 등을 적용 가능
 class Info{
   private _name: string;
 
