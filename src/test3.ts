@@ -53,3 +53,34 @@ console.log(exVoid, typeof exVoid)
 function exNever1():never{
   throw new Error('난 never로 지정해줘')
 }
+function exNever2(message: string): never{
+  throw new Error(message)
+}
+function exNever3(): never{
+  while(true){
+    console.log('난 never로 지정해줘')
+  }
+}
+// console.log(exNever1())
+// console.log(exNever2(''))
+// console.log(exNever3())
+
+// ? Type alias 별칭 익명의 함수와 사용하기 좋다
+type numOrStr = number|string
+let exNum: numOrStr
+exNum = 5
+exNum = "5"
+
+type paramType = (a: number, b: number)=>number
+let add: paramType = (a, b)=> a+b
+let minus: paramType = (a, b)=>a-b
+console.log(add(1, 2), minus(1, 2))
+
+// ? Union type 2개 이상의 타입으로 정의합니다.
+// const uni = string | number
+
+// ? Intersection type
+interface A{args1: string}
+interface B{args2: number}
+let ab: A & B = {args1:"안녕", args2:1}
+console.log(ab)
