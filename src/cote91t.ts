@@ -7,9 +7,11 @@
 interface Test{
   [key:string]: object
 }
-
-
-const shape_array: (string | number)[] = ["spade", "heart", "diamond", "club", "joker"];
+interface test2{
+  shape:number[]
+}
+type dongwook = string[];
+const shape_array: dongwook = ["spade", "heart", "diamond", "club", "joker"];
 const objValue: object = {"A" : 1, "2" : 2, "3" : 3, "4" : 4, "5" : 5, "6" : 6, "7" : 7, "8" : 8, "9" : 9, "10": 10, "J" : 11, "Q" : 12, "K" : 13 }
 const jokerValue: object = { "RED" : 1, "BLACK" : 2 } 
 
